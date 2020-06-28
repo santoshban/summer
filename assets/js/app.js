@@ -1,9 +1,26 @@
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(SplitText);
+
 $(document).ready(function($){
+
+
 
     console.clear();
     
     select = e => document.querySelector(e);
     selectAll = e => document.querySelectorAll(e);
+
+    const slides = selectAll(".uk-section");
+    const slidesHeading = selectAll(".section_heading");
+    const splitTitles = new SplitText(slidesHeading, {
+        type: "lines, chars", linesClass: "line", charsClass: "char", position: "relative"
+    });
+
+    const slidesQuoteOne = selectAll(".section_two .s_quote");
+    const slidesQuoteTwo = selectAll(".section_three .s_quote");
+
+    let slideID = 0;
 
     const home = select("#home");
 
@@ -70,66 +87,88 @@ $(document).ready(function($){
         }, 1)
     }
 
+
+    // Slides section
+
+    function initSlides() {
+        // Animation of each slide scrolling into view
+
+        slides.forEach((slide, i) => {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: slide,
+                    start: "0px center",
+                    markers: true
+                }
+            });
+
+            tl.from(slide.querySelectorAll('.section_heading'), {
+                ease: "power4",
+                y: "+=5vh",
+                duration: 1.5,
+            })
+
+            .from(slide.querySelectorAll('.line__inner'), {
+                y: 200,
+                duration: 1,
+                ease: "power4",
+                stagger: 0.1
+            }, 0)
+        })
+    }
+
+
+    function initQuoteOne() {
+        slidesQuoteOne.forEach((slideQuoteOne, i) => {
+            let qtl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: slideQuoteOne,
+                    start: "-10% 50%",
+                    markers: false,
+                }
+            });
+
+            qtl.from(slideQuoteOne.querySelectorAll('blockquote'), {
+                ease: "power4",
+                x: "+=50vw",
+                opacity: 0,
+                duration: 2.5
+            })
+        })
+    }
+
+    function initQuoteTwo() {
+        slidesQuoteTwo.forEach((slidesQuoteTwo, i) => {
+            let qtl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: slidesQuoteTwo,
+                    start: "-10% 50%",
+                    markers: false,
+                }
+            });
+
+            qtl.from(slidesQuoteTwo.querySelectorAll('blockquote'), {
+                ease: "power4",
+                x: "+=50vw",
+                opacity: 0,
+                duration: 2.5
+            })
+        })
+    }
+
+
     function init(){
         gsap.set(home, { autoAlpha: 1 });
         initIntro();
+        initSlides();
+        // initHeadingOne();
+        initQuoteOne();
+        initQuoteTwo();
     }
 
     window.onload = () => {
         init();
     };
-
-    // gsap.from(".s_logo", 2, {
-    //     opacity: 0,
-    //     x: 10,
-    //     ease: Expo.easeInOut
-    // })
-
-    // gsap.from(".s_email", 2, {
-    //     opacity: 0,
-    //     x: -10,
-    //     ease: Expo.easeInOut
-    // })
-
-    // gsap.from(".navbar li", 2, {
-    //     delay: 1,
-    //     y: 10,
-    //     opacity: 0,
-    //     ease: Expo.easeInOut
-    // })
-
-    // gsap.from(".bar_wrapper", 2, {
-    //     delay: 2,
-    //     opacity: 0,
-    //     height: 0,
-    //     width: 1,
-    //     ease: Expo.easeInOut
-    // })
-
-    // gsap.from(".scroll_more_text", 2, {
-    //     delay: 1,
-    //     opacity: 0,
-    //     y: 10,
-    //     ease: Expo.easeInOut
-    // })
-
-    // gsap.fromTo(".grey_path", 3, { drawSVG: "100% 100%", delay: 2}, {drawSVG: "0% 100%", delay: 2});
-    // gsap.from(".grey_circle", 2, {
-    //     delay: 1,
-    //     drawSVG: 0
-    // })
-
-    // gsap.from(".bg_main", 2, {
-    //     delay: 3,
-    //     opacity: 0,
-    // })
-
-    // gsap.from("#home .s_text_box", 2, {
-    //     delay: 2.75,
-    //     opacity: 0,
-    //     y: 20,
-    //     ease: Expo.easeInOut
-    // })
 
     // variables
 
@@ -152,10 +191,10 @@ $(document).ready(function($){
     });
 
     tlImage.to(bgMain, {
-        y: "-95%", 
+        y: "-0px", 
         duration: 0.1,
         scale: 0.3,
-        transformOrigin: "center left"
+        transformOrigin: "top left"
     })
 
     const tlHero = gsap.timeline({
@@ -175,65 +214,64 @@ $(document).ready(function($){
         duration: 0.5
     })
 
-    tlHero.to(blueCircle, {
-        r: "100vw",
-        duration: 0.5
-    })
+    // tlHero.to(blueCircle, {
+    //     r: "100vw",
+    //     duration: 0.5
+    // })
 
-    const tlSectionTwo = gsap.timeline({
-        scrollTrigger:{
-            trigger: blueCircle,
-            start: "top 400px",
-            scrub: true,
-            markers: false
-        }
-    })
+    // const tlSectionTwo = gsap.timeline({
+    //     scrollTrigger:{
+    //         trigger: blueCircle,
+    //         start: "top 400px",
+    //         scrub: true,
+    //         markers: false
+    //     }
+    // })
 
-    tlSectionTwo.to(sectionTwo, {
-        opacity: 1,
-        duration: 0.5,
-        y: 0,
-    })
+    // tlSectionTwo.to(sectionTwo, {
+    //     opacity: 1,
+    //     duration: 0.5,
+    //     y: 0,
+    // })
 
-    const tlSectionTwoContent = gsap.timeline({
-        scrollTrigger: {
-            trigger: sectionTwoHeading,
-            start: "top 40%",
-            end: "top 150px",
-            scrub: true,
-            markers: true
-        }
-    })
+    // const tlSectionTwoContent = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: sectionTwoHeading,
+    //         start: "top 40%",
+    //         end: "top 150px",
+    //         scrub: true,
+    //         markers: true
+    //     }
+    // })
 
-    tlSectionTwoContent.to(sectionTwoHeading, {
-        // x: "-500px",
-        marginRight: "auto",
-        marginLeft: "0",
-        duration: 5,
-        opacity: 1,
-        scrub: true
-    })
+    // tlSectionTwoContent.to(sectionTwoHeading, {
+    //     marginRight: "auto",
+    //     marginLeft: "0",
+    //     duration: 5,
+    //     opacity: 1,
+    //     scrub: true
+    // })
 
-    .to(".section_two .heading_wrapper", {
-        duration: 0.5,
-        opacity: 1,
-        delay: 0.1,
-        y: "-20"
-    })
+    // .to(".section_two .heading_wrapper", {
+    //     duration: 0.5,
+    //     opacity: 1,
+    //     delay: 0.1,
+    //     y: "-20"
+    // })
 
-    .to(".section_two .body_wrapper", {
-        duration: 0.5,
-        opacity: 1,
-        delay: 0.1,
-        y: "-20"
-    })
+    // .to(".section_two .body_wrapper", {
+    //     duration: 0.5,
+    //     opacity: 1,
+    //     delay: 0.1,
+    //     y: "-20"
+    // })
 
 
 
     document.getElementById("logo").addEventListener("click", function() {
-        tlSectionTwoContent.reverse();
-        tlSectionTwo.reverse();
-        tlHero.reverse();
+        // tlSectionTwoContent.reverse();
+        // tlSectionTwo.reverse();
+        // tlHero.reverse();
     });
 
     // Layered Pinning
@@ -268,21 +306,21 @@ $(document).ready(function($){
 
     // SKEW images with ScrollTrigger
 
-    let proxy = { skew: 0 },
-        skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"),
-        clamp = gsap.utils.clamp(-20, 20);
+    // let proxy = { skew: 0 },
+    //     skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"),
+    //     clamp = gsap.utils.clamp(-20, 20);
 
-    ScrollTrigger.create({
-        onUpdate: (self) => {
-            let skew = clamp(self.getVelocity() / -300);
-            if(Math.abs(skew) > Math.abs(proxy.skew)) {
-                proxy.skew = skew;
-                gsap.to(proxy, {skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
-            }
-        }
-    });
+    // ScrollTrigger.create({
+    //     onUpdate: (self) => {
+    //         let skew = clamp(self.getVelocity() / - 300);
+    //         if(Math.abs(skew) > Math.abs(proxy.skew)) {
+    //             proxy.skew = skew;
+    //             gsap.to(proxy, {skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
+    //         }
+    //     }
+    // });
 
-    gsap.set(".skewElem", {transformOrigin: "right center", force3D: true});
+    // gsap.set(".skewElem", {transformOrigin: "right center", force3D: true});
 
     ScrollTrigger.create({
         trigger: ".section_two",
@@ -301,3 +339,8 @@ $(document).ready(function($){
     });
 
 });
+
+new SmoothScroll('.smoothscroll', {
+    duration: 2000,
+    timingFunction: 'cubic-bezier(0.39, 0.575, 0.565, 1)'
+})

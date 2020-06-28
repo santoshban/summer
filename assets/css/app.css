@@ -33,6 +33,18 @@ body{
 
 }
 
+.split-parent{
+    overflow: hidden;
+}
+
+.split-child{
+    display: inline-block;
+}
+
+#main-scrollbar{
+    overflow: auto;
+}
+
 /* CUSTOM GRID
 =========================== */
 
@@ -279,6 +291,7 @@ body, p{
 .s_container{
     width: 1360px;
     margin: 0 auto;
+    /* padding-left: 15vw !important; */
 }
 
 .s_text_box p{
@@ -413,8 +426,24 @@ body, p{
     background: var(--primary-color);
 }
 
+.line {
+    overflow: hidden;
+}
+
+.line:nth-of-type(even) {
+    margin-top: -1vw;
+}
+  
+.line__inner {
+    display: block;
+}
+
 /* SECTION ONE
 =========================== */
+
+.pattern_logo{
+    max-width: 90vh;
+}
 
 .s_cover{
     object-fit: cover;
@@ -440,7 +469,7 @@ body, p{
 .hero_text{
     position: absolute;
     height: 100%;
-    width: 625px;
+    width: 670px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -462,7 +491,7 @@ body, p{
 /* SECTION TWO
 =========================== */
 
-.position_absolute{
+/* .position_absolute{
     position: absolute;
     top: 0;
     width: 100%;
@@ -473,12 +502,14 @@ body, p{
     top: 90vh;
 }
 
+*/
+
 .section_heading{
     font-size: 11.25rem;
     font-family: var(--title-font);
 }
 
-.section_two .heading_wrapper .section_heading{
+/* .section_two .heading_wrapper .section_heading{
     max-width: 720px;
     margin-right: -200px;
     margin-left: auto;
@@ -487,11 +518,11 @@ body, p{
 
 .section_two .body_wrapper{
     opacity: 0;
-}
+}  */
 
 #lenders{
     background-image: url(../images/s-light.svg);
-    background-size: 950px;
+    background-size: 90vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 26% center;
@@ -503,7 +534,7 @@ body, p{
 
 #services{
     background-image: url(../images/s40.svg);
-    background-size: 950px;
+    background-size: 90vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 26% center;

@@ -54,6 +54,9 @@
             <li><a href="#contact" uk-scroll>Contact</a></li>
         </ul>
     </div>
+
+<main class="smoothscroll">
+
     <div id="home" class="uk-section uk-padding-remove bg_transparent text_dark section_one">
         <div class="layer_one z_0">
             <div class="s-grid s-grid-5-7">
@@ -103,24 +106,26 @@
         </div>
     </div>
     <!-- Lenders -->
-    <div id="lenders" class="uk-section bg_transparent text_light position_absolute section_two bg_pattern" uk-height-viewport uk-scrollspy="target: .scrollspy; cls: uk-animation-slide-bottom-small; delay: 800; repeat: true">
+    <div id="lenders" class="uk-section bg_primary text_light section_two bg_pattern" uk-height-viewport uk-scrollspy="target: .scrollspy; cls: uk-animation-slide-bottom-small; delay: 800; repeat: false">
         <!-- <div class="static_pattern">
             <img src="assets/images/s.svg" alt="">
         </div> -->
         <div class="uk-container uk-container-large s_container padding_large heading_wrapper">
-            <h2 class="section_heading">Lenders.</h2>
+            <h2 class="section_heading"><span class="line__inner">Lenders.</span></h2>
         </div>
         <div class="uk-container uk-container-large s_container padding_large uk-position-relative body_wrapper">
             <div class="uk-child-width-expand@s" uk-grid>
-                <div class="scrollspy">
+                <div class="col__image-wrap scrollspy">
                     <img class="image_two skewElem" src="assets/images/02.jpg" alt="02">
                 </div>
                 <div class="uk-flex uk-flex-column uk-flex-center uk-flex-left">
-                    <div class="width_4 s_text_box scrollspy">
-                        <h3 class="uk-text-uppercase caption_heading">The Law Firm for Lenders</h3>
-                        <p>A tailored and personalised service, from advising in matters ranging from personal law and residential/commercial mortgage services to complex loan recovery disputes.</p>
-                        <p>Through honesty and trust, Summer Lawyers have built a loyal client base that sing their praises. Law, at times, is an intimidating and confusing area or expertise but Summer Lawyers seek to break down the misconceptions surrounding law through integrity, clarity and honesty. We are a law firm with your best interests at heart.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor placerat aliquet. Etiam at leo pharetra, facilisis urna sit amet, consectetur magna. Curabitur laoreet mi in porttitor ultricies. Curabitur non justo commodo, congue elit vel, tincidunt risus. Vivamus in eros quis magna dignissim sodales a in urna. Proin aliquet tellus ante, eu mollis odio imperdiet at. Vivamus purus ante, feugiat ac dolor id, blandit elementumi. Maecenas in risus vel risus feugiat condimentum vitae et odio. Integer placerat nunc gravida, luctus libero nec, tempus quam. Ut lorem nulla, tempor vel mollis ut, posuere ut nisi. Pellentesque molestie eleifend nisl id accumsan. Donec non odio pellentesque lacus venenatis pretium. Nulla non neque rhoncus ligula eu, tempor tortor. Nam a convallis ante, nec consectetur ipsum.</p>
+                    <div class="width_4 s_text_box">
+                        <h3 class="uk-text-uppercase caption_heading scrollspy">The Law Firm for Lenders</h3>
+                        <div class="text_wrapper scrollspy">
+                            <p>A tailored and personalised service, from advising in matters ranging from personal law and residential/commercial mortgage services to complex loan recovery disputes.</p>
+                            <p>Through honesty and trust, Summer Lawyers have built a loyal client base that sing their praises. Law, at times, is an intimidating and confusing area or expertise but Summer Lawyers seek to break down the misconceptions surrounding law through integrity, clarity and honesty. We are a law firm with your best interests at heart.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor placerat aliquet. Etiam at leo pharetra, facilisis urna sit amet, consectetur magna. Curabitur laoreet mi in porttitor ultricies. Curabitur non justo commodo, congue elit vel, tincidunt risus. Vivamus in eros quis magna dignissim sodales a in urna. Proin aliquet tellus ante, eu mollis odio imperdiet at. Vivamus purus ante, feugiat ac dolor id, blandit elementumi. Maecenas in risus vel risus feugiat condimentum vitae et odio. Integer placerat nunc gravida, luctus libero nec, tempus quam. Ut lorem nulla, tempor vel mollis ut, posuere ut nisi. Pellentesque molestie eleifend nisl id accumsan. Donec non odio pellentesque lacus venenatis pretium. Nulla non neque rhoncus ligula eu, tempor tortor. Nam a convallis ante, nec consectetur ipsum.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -224,7 +229,7 @@
                             <img src="assets/images/quote.svg" alt="">
                         </div>
                     </div>
-                    <div class="s_quote scrollspy" uk-scrollspy-class="uk-animation-slide-right-medium">
+                    <div class="s_quote">
                         <blockquote>Summer are <br />incredible.</blockquote>
                     </div>
 
@@ -234,24 +239,24 @@
     </div>
 
     <!-- Services -->
-    <div id="services" class="uk-section bg_secondary text_dark uk-position-relative section_three" uk-height-viewport>
+    <div id="services" class="uk-section bg_secondary text_dark uk-position-relative section_three" uk-height-viewport uk-scrollspy="target: .scrollspy; cls: uk-animation-slide-bottom-small; delay: 300; repeat: false">
         <!-- <div class="static_pattern">
             <img src="assets/images/s-light.svg" alt="">
         </div> -->
-        <div class="uk-container uk-container-large s_container padding_large">
-            <h2 class="section_heading">Services.</h2>
+        <div class="uk-container uk-container-large s_container uk-padding-remove-top uk-padding-remove-bottom">
+            <h2 class="section_heading"><span class="line__inner">Services.</span></h2>
         </div>
         <div class="uk-container uk-container-large s_container padding_large">
-            <h3 class="section_sub_heading width_5">Mortgage Advances & Securitisation.</h3>
+            <h3 class="section_sub_heading width_5 scrollspy">Mortgage Advances & Securitisation.</h3>
         </div>
         <div class="uk-container uk-container-large s_container padding_large uk-position-relative">
-            <div class="uk-child-width-expand@s" uk-grid>
+            <div class="uk-child-width-expand@s scrollspy" uk-grid>
                 <div>
                     <img class="image_two skewElem" src="assets/images/04.jpg" alt="02">
                 </div>
                 <div class="uk-flex uk-flex-column uk-flex-center uk-flex-left">
                     <ul class="s_accordion" uk-accordion="collapsible: false">
-                        <li>
+                        <li class="scrollspy">
                             <div class="accordion_icon">
                                 <img src="assets/images/ico-service-01.svg" alt="Mortgage Due Diligence">
                             </div>
@@ -260,7 +265,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor placerat aliquet. Etiam at leo pharetra, facilisis urna sit amet, consectetur magna. Curabitur laoreet mi in porttitor ultricies. Curabitur non justo commodo, congue elit vel, tincidunt risus. Vivamus in eros quis magna dignissim sodales a in urna. Proin aliquet tellus ante, eu mollis odio imperdiet at. Vivamus purus ante, feugiat ac dolor id, blandit elementum mi. Maecenas in risus vel risus feugiat condimentum vitae et odio. Integer placerat nunc gravida, luctus libero nec, tempus quam. Ut lorem nulla, tempor vel mollis ut, posuere ut nisi. Molestie eleifend nisl accumsan. </p>
                             </div>
                         </li>
-                        <li>
+                        <li class="scrollspy">
                             <div class="accordion_icon">
                                 <img src="assets/images/ico-service-02.svg" alt="Construction finance">
                             </div>
@@ -269,7 +274,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor placerat aliquet. Etiam at leo pharetra, facilisis urna sit amet, consectetur magna. Curabitur laoreet mi in porttitor ultricies. Curabitur non justo commodo, congue elit vel, tincidunt risus. Vivamus in eros quis magna dignissim sodales a in urna. Proin aliquet tellus ante, eu mollis odio imperdiet at. Vivamus purus ante, feugiat ac dolor id, blandit elementum mi. Maecenas in risus vel risus feugiat condimentum vitae et odio. Integer placerat nunc gravida, luctus libero nec, tempus quam. Ut lorem nulla, tempor vel mollis ut, posuere ut nisi. Molestie eleifend nisl accumsan. </p>
                             </div>
                         </li>
-                        <li>
+                        <li class="scrollspy">
                             <div class="accordion_icon">
                                 <img src="assets/images/ico-service-03.svg" alt="Loan Syndication Services">
                             </div>
@@ -278,7 +283,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor placerat aliquet. Etiam at leo pharetra, facilisis urna sit amet, consectetur magna. Curabitur laoreet mi in porttitor ultricies. Curabitur non justo commodo, congue elit vel, tincidunt risus. Vivamus in eros quis magna dignissim sodales a in urna. Proin aliquet tellus ante, eu mollis odio imperdiet at. Vivamus purus ante, feugiat ac dolor id, blandit elementum mi. Maecenas in risus vel risus feugiat condimentum vitae et odio. Integer placerat nunc gravida, luctus libero nec, tempus quam. Ut lorem nulla, tempor vel mollis ut, posuere ut nisi. Molestie eleifend nisl accumsan. </p>
                             </div>
                         </li>
-                        <li>
+                        <li class="scrollspy">
                             <div class="accordion_icon">
                                 <img src="assets/images/ico-service-04.svg" alt="Personal Property Securities">
                             </div>
@@ -287,7 +292,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor placerat aliquet. Etiam at leo pharetra, facilisis urna sit amet, consectetur magna. Curabitur laoreet mi in porttitor ultricies. Curabitur non justo commodo, congue elit vel, tincidunt risus. Vivamus in eros quis magna dignissim sodales a in urna. Proin aliquet tellus ante, eu mollis odio imperdiet at. Vivamus purus ante, feugiat ac dolor id, blandit elementum mi. Maecenas in risus vel risus feugiat condimentum vitae et odio. Integer placerat nunc gravida, luctus libero nec, tempus quam. Ut lorem nulla, tempor vel mollis ut, posuere ut nisi. Molestie eleifend nisl accumsan. </p>
                             </div>
                         </li>
-                        <li>
+                        <li class="scrollspy">
                             <div class="accordion_icon">
                                 <img src="assets/images/ico-service-04.svg" alt="Mortgage Priorities">
                             </div>
@@ -302,14 +307,14 @@
         </div>
 
         <div class="uk-container uk-container-large s_container padding_large">
-            <h3 class="section_sub_heading width_5">Mortgage <br />Enforcements.</h3>
+            <h3 class="section_sub_heading width_5 scrollspy">Mortgage <br />Enforcements.</h3>
         </div>
 
         <div class="uk-container uk-container-large s_container padding_large uk-position-relative">
             <div class="uk-child-width-expand@s" uk-grid>
                 <div class="uk-flex uk-flex-column uk-flex-center uk-flex-left">
                     <ul class="s_accordion" uk-accordion="collapsible: false">
-                        <li>
+                        <li class="scrollspy">
                             <div class="accordion_icon">
                                 <img src="assets/images/ico-service-01.svg" alt="Mortgage Due Diligence">
                             </div>
@@ -318,7 +323,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor placerat aliquet. Etiam at leo pharetra, facilisis urna sit amet, consectetur magna. Curabitur laoreet mi in porttitor ultricies. Curabitur non justo commodo, congue elit vel, tincidunt risus. Vivamus in eros quis magna dignissim sodales a in urna. Proin aliquet tellus ante, eu mollis odio imperdiet at. Vivamus purus ante, feugiat ac dolor id, blandit elementum mi. Maecenas in risus vel risus feugiat condimentum vitae et odio. Integer placerat nunc gravida, luctus libero nec, tempus quam. Ut lorem nulla, tempor vel mollis ut, posuere ut nisi. Molestie eleifend nisl accumsan. </p>
                             </div>
                         </li>
-                        <li>
+                        <li class="scrollspy">
                             <div class="accordion_icon">
                                 <img src="assets/images/ico-service-02.svg" alt="Construction finance">
                             </div>
@@ -327,7 +332,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor placerat aliquet. Etiam at leo pharetra, facilisis urna sit amet, consectetur magna. Curabitur laoreet mi in porttitor ultricies. Curabitur non justo commodo, congue elit vel, tincidunt risus. Vivamus in eros quis magna dignissim sodales a in urna. Proin aliquet tellus ante, eu mollis odio imperdiet at. Vivamus purus ante, feugiat ac dolor id, blandit elementum mi. Maecenas in risus vel risus feugiat condimentum vitae et odio. Integer placerat nunc gravida, luctus libero nec, tempus quam. Ut lorem nulla, tempor vel mollis ut, posuere ut nisi. Molestie eleifend nisl accumsan. </p>
                             </div>
                         </li>
-                        <li>
+                        <li class="scrollspy">
                             <div class="accordion_icon">
                                 <img src="assets/images/ico-service-03.svg" alt="Loan Syndication Services">
                             </div>
@@ -336,7 +341,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor placerat aliquet. Etiam at leo pharetra, facilisis urna sit amet, consectetur magna. Curabitur laoreet mi in porttitor ultricies. Curabitur non justo commodo, congue elit vel, tincidunt risus. Vivamus in eros quis magna dignissim sodales a in urna. Proin aliquet tellus ante, eu mollis odio imperdiet at. Vivamus purus ante, feugiat ac dolor id, blandit elementum mi. Maecenas in risus vel risus feugiat condimentum vitae et odio. Integer placerat nunc gravida, luctus libero nec, tempus quam. Ut lorem nulla, tempor vel mollis ut, posuere ut nisi. Molestie eleifend nisl accumsan. </p>
                             </div>
                         </li>
-                        <li>
+                        <li class="scrollspy">
                             <div class="accordion_icon">
                                 <img src="assets/images/ico-service-04.svg" alt="Personal Property Securities">
                             </div>
@@ -345,7 +350,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor placerat aliquet. Etiam at leo pharetra, facilisis urna sit amet, consectetur magna. Curabitur laoreet mi in porttitor ultricies. Curabitur non justo commodo, congue elit vel, tincidunt risus. Vivamus in eros quis magna dignissim sodales a in urna. Proin aliquet tellus ante, eu mollis odio imperdiet at. Vivamus purus ante, feugiat ac dolor id, blandit elementum mi. Maecenas in risus vel risus feugiat condimentum vitae et odio. Integer placerat nunc gravida, luctus libero nec, tempus quam. Ut lorem nulla, tempor vel mollis ut, posuere ut nisi. Molestie eleifend nisl accumsan. </p>
                             </div>
                         </li>
-                        <li>
+                        <li class="scrollspy">
                             <div class="accordion_icon">
                                 <img src="assets/images/ico-service-04.svg" alt="Mortgage Priorities">
                             </div>
@@ -356,12 +361,12 @@
                         </li>
                     </ul>
                 </div>
-                <div class="">
+                <div class="scrollspy">
                     <img class="image_two skewElem uk-align-right" src="assets/images/04.jpg" alt="02">
                 </div>
             </div>
         </div>
-        <div class="uk-container uk-container-large s_container padding_large text_dark">
+        <div class="uk-container uk-container-large s_container uk-padding-remove-top uk-padding-remove-bottom text_dark">
             <div class="s_quote">
                 <blockquote>Make it simple but, <br />significant.</blockquote>
             </div>
@@ -369,22 +374,22 @@
     </div>
 
     <!-- About -->
-    <div id="about" class="uk-section bg_white text_dark uk-position-relative uk-padding-remove-bottom section_four" uk-height-viewport>
+    <div id="about" class="uk-section bg_white text_dark uk-position-relative uk-padding-remove-bottom section_four" uk-height-viewport uk-scrollspy="target: .scrollspy; cls: uk-animation-slide-bottom-small; delay: 300; repeat: false">
         <div class="uk-container uk-container-large s_container padding_large">
-            <h2 class="section_heading">About Us.</h2>
+            <h2 class="section_heading"><span class="line__inner">About Us.</span></h2>
         </div>
         <div class="uk-container uk-container-large s_container padding_large uk-position-relative">
             <div class="uk-child-width-expand@s" uk-grid>
                 <div>
-                    <img class="image_two skewElem" src="assets/images/04.jpg" alt="02">
+                    <img class="image_two skewElem scrollspy" src="assets/images/04.jpg" alt="02">
                 </div>
                 <div class="uk-flex uk-flex-column uk-flex-center uk-flex-left">
                     <div class="s_text_box">
-                        <h3 class="section_sub_heading">Summer Lawyers.</h3>
-                        <h3 class="uk-text-uppercase caption_heading">We are a law firm for lenders.</h3>
-                        <p>Established in 2013. From my understanding, it was started more like a general practice, did whatever work he could get. Then, slowly began to develop it into a mortgage specialist firm once he built up a reputation within the industry and became known by Lenders.</p>
-                        <p>Growing from working out of a home office to having 40+ staff that services Lenders State-wide and become a name within the industry as a law firm that specialises in mortgage law. Whilst doing this, we have tried to stay true to who we are, which really reflect PR’s approach that made us successful being simple, easy going, relaxed, uncomplicated, efficient, timely, available and commercial.</p>
-                        <p>I’m not really sure what to say here. Our firm has gone from strength to strength, I remember a good week in 2015 was if we settled 10 loans. Now, we settle more than that in 1 day (when times were good prior to Covid-19). We have become more experiences,, developed better relationships with Lenders / Brokers as well as with the Court via the use of highly reputable Barristers in our comprehensive litigation history representing Lenders on mortgage recovery matters. We started with a handful of Lenders, including, First Mortgage Capital Pty Ltd, which remain our main clients today. PR is well known. People who his never met, never acted for, have weirdly heard of him. Not sure what that means – but I think it is to a degree indicative of how present his made himself (in turn SL) in the industry.</p>
+                        <h3 class="section_sub_heading scrollspy">Summer Lawyers.</h3>
+                        <h3 class="uk-text-uppercase caption_heading scrollspy">We are a law firm for lenders.</h3>
+                        <p class="scrollspy">Established in 2013. From my understanding, it was started more like a general practice, did whatever work he could get. Then, slowly began to develop it into a mortgage specialist firm once he built up a reputation within the industry and became known by Lenders.</p>
+                        <p class="scrollspy">Growing from working out of a home office to having 40+ staff that services Lenders State-wide and become a name within the industry as a law firm that specialises in mortgage law. Whilst doing this, we have tried to stay true to who we are, which really reflect PR’s approach that made us successful being simple, easy going, relaxed, uncomplicated, efficient, timely, available and commercial.</p>
+                        <p class="scrollspy">I’m not really sure what to say here. Our firm has gone from strength to strength, I remember a good week in 2015 was if we settled 10 loans. Now, we settle more than that in 1 day (when times were good prior to Covid-19). We have become more experiences,, developed better relationships with Lenders / Brokers as well as with the Court via the use of highly reputable Barristers in our comprehensive litigation history representing Lenders on mortgage recovery matters. We started with a handful of Lenders, including, First Mortgage Capital Pty Ltd, which remain our main clients today. PR is well known. People who his never met, never acted for, have weirdly heard of him. Not sure what that means – but I think it is to a degree indicative of how present his made himself (in turn SL) in the industry.</p>
                     </div>
                 </div>
             </div>
@@ -393,14 +398,14 @@
             <div class="uk-child-width-expand@s" uk-grid>
                 <div class="uk-flex uk-flex-column uk-flex-center uk-flex-left">
                     <div class="s_text_box width_5">
-                        <h3 class="section_sub_heading">Our Mission.</h3>
-                        <h3 class="uk-text-uppercase caption_heading">Simply put; we get the job done.</h3>
-                        <p>Summer Lawyers aims to break down the common misconception that law firms are idol with client’s time and money. The client’s time is their money, and they value that time above all else.</p>
-                        <p>Summer Lawyers seek to get the job done as efficiently and as professionally as possible. They are a cut-through firm, that looks to the future, always seeking to progress and evolve with the ever-changing dynamics of the world. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras auctor condimentum lorem quis aliquet. Sed fermentum sem ipsum, ac tincidunt nunc pharetra ut. Suspendisse vel volutpat turpis. Donec viverra ultrices dapibus.</p>
+                        <h3 class="section_sub_heading scrollspy">Our Mission.</h3>
+                        <h3 class="uk-text-uppercase caption_heading scrollspy">Simply put; we get the job done.</h3>
+                        <p class="scrollspy">Summer Lawyers aims to break down the common misconception that law firms are idol with client’s time and money. The client’s time is their money, and they value that time above all else.</p>
+                        <p class="scrollspy">Summer Lawyers seek to get the job done as efficiently and as professionally as possible. They are a cut-through firm, that looks to the future, always seeking to progress and evolve with the ever-changing dynamics of the world. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras auctor condimentum lorem quis aliquet. Sed fermentum sem ipsum, ac tincidunt nunc pharetra ut. Suspendisse vel volutpat turpis. Donec viverra ultrices dapibus.</p>
                     </div>
                 </div>
                 <div>
-                    <img class="image_two uk-align-right skewElem" src="assets/images/05.jpg" alt="02">
+                    <img class="image_two uk-align-right skewElem scrollspy" src="assets/images/05.jpg" alt="02">
                 </div>
             </div>
         </div>
@@ -409,21 +414,21 @@
     </div>
 
     <!-- Career -->
-    <div id="career" class="uk-section text_secondary uk-position-relative section_five" uk-height-viewport>
+    <div id="career" class="uk-section text_secondary uk-position-relative section_five" uk-height-viewport uk-scrollspy="target: .scrollspy; cls: uk-animation-slide-bottom-small; delay: 300; repeat: false">
         <div class="uk-container uk-container-large s_container padding_large">
             <div class="uk-child-width-expand@s" uk-grid>
                 <div class="career_intro">
                     <div class="s_text_box">
-                        <h2 class="section_sub_heading">Career.</h2>
-                        <h3 class="uk-text-uppercase caption_heading">We are a Law firm for lenders.</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras auctor condimentum lorem quis aliquet. Sed fermentum sem ipsum, ac tincidunt nunc pharetra ut. Suspendisse vel volutpat turpis. Donec viverra ultrices dapibus.</p>
-                        <img class="image_one skewElem" src="assets/images/04.jpg" alt="02">
+                        <h2 class="section_sub_heading scrollspy">Career.</h2>
+                        <h3 class="uk-text-uppercase caption_heading scrollspy">We are a Law firm for lenders.</h3>
+                        <p class="scrollspy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras auctor condimentum lorem quis aliquet. Sed fermentum sem ipsum, ac tincidunt nunc pharetra ut. Suspendisse vel volutpat turpis. Donec viverra ultrices dapibus.</p>
+                        <img class="image_one skewElem scrollspy" src="assets/images/04.jpg" alt="02">
                     </div>
                 </div>
                 <div class="career_wrapper">
                     <div class="career_list">
                         <ul class="s_accordion" uk-accordion="collapsible: false">
-                            <li>
+                            <li class="scrollspy">
                                 <a class="uk-accordion-title" href="#">Litigation Lawyer / Associate</a>
                                 <div class="uk-accordion-content">
                                     <div class="career_details_item" uk-grid>
@@ -461,7 +466,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="scrollspy">
                                 <a class="uk-accordion-title" href="#">Account Manager</a>
                                 <div class="uk-accordion-content">
                                     <div class="career_details_item" uk-grid>
@@ -499,7 +504,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="scrollspy">
                                 <a class="uk-accordion-title" href="#">Conveyancer / Paralegal</a>
                                 <div class="uk-accordion-content">
                                     <div class="career_details_item" uk-grid>
@@ -537,7 +542,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="scrollspy">
                                 <a class="uk-accordion-title" href="#">Office Manager</a>
                                 <div class="uk-accordion-content">
                                     <div class="career_details_item" uk-grid>
@@ -582,27 +587,27 @@
         </div>
     </div>
     <!-- Contact -->
-    <div id="contact" class="uk-section text_dark bg_secondary uk-position-relative uk-padding-remove section_six">
+    <div id="contact" class="uk-section text_dark bg_secondary uk-position-relative uk-padding-remove section_six" uk-scrollspy="target: .scrollspy; cls: uk-animation-slide-bottom-small; delay: 300; repeat: false">
         <div class="uk-container uk-container-large s_container contact_box uk-padding-remove">
             <div class="uk-child-width-expand@s uk-grid-collapse" uk-grid>
                 <div class="column_map">
-                    <img src="assets/images/map.jpg" alt="">
+                    <img class="scrollspy" src="assets/images/map.jpg" alt="">
                 </div>
                 <div class="column_contact uk-flex uk-flex-column uk-flex-center bg_grey">
                     <div class="contact_text_box">
-                        <h2 class="section_sub_heading">Let's Talk</h2>
+                        <h2 class="section_sub_heading scrollspy">Let's Talk</h2>
                         <div class="contact_details" uk-grid>
-                            <div class="contact_details_left">
+                            <div class="contact_details_left scrollspy">
                                 <p>Suite 4, 13 Lackey Street <br />Summer Hill NSW 2130</p>
                             </div>
-                            <div class="contact_details_right">
+                            <div class="contact_details_right scrollspy">
                                 <a href="tel:02 9799 8557">02 9799 8557</a>
                                 <a href="mailto:info@summerlawyers.com.au">info@summerlawyers.com.au</a>
                             </div>
                         </div>
-                        <h3 class="uk-text-uppercase caption_heading">We always put people first.</h3>
-                        <p>Please contact us or submit the form below and we will contact you immediately.</p>
-                        <form class="s_form" action="">
+                        <h3 class="uk-text-uppercase caption_heading scrollspy">We always put people first.</h3>
+                        <p class="scrollspy">Please contact us or submit the form below and we will contact you immediately.</p>
+                        <form class="s_form scrollspy" action="">
                             <fieldset class="uk-fieldset">
                                 <div class="uk-margin">
                                     <input class="uk-input" type="text" placeholder="Full Name">
@@ -622,9 +627,9 @@
 
 
     <!-- Footer -->
-    <div id="footer" class="uk-section text_dark bg_secondary uk-position-relative anchor anchor_dark section_seven">
+    <div id="footer" class="uk-section text_dark bg_secondary uk-position-relative anchor anchor_dark section_seven" uk-scrollspy="target: .scrollspy; cls: uk-animation-slide-bottom-small; delay: 300; repeat: false">
         <div class="uk-container uk-container-large s_container">
-            <div class="uk-child-width-expand@s" uk-grid>
+            <div class="uk-child-width-expand@s scrollspy" uk-grid>
                 <div>
                     <div class="footer_logo">
                         <img src="assets/images/footer-logo.svg" alt="Summer">
@@ -642,11 +647,11 @@
                 </div>
             </div>
         </div>
-        <div class="uk-container uk-container-large s_container">
+        <div class="uk-container uk-container-large s_container scrollspy">
             <div class="separator"></div>
         </div>
         <div class="uk-container uk-container-large s_container">
-            <div class="uk-child-width-expand@s" uk-grid>
+            <div class="uk-child-width-expand@s scrollspy" uk-grid>
                 <div>
                     <p class="footer_intro">We approach each problem with three essential elements: <br />Strategic Thinking, Creative Solutions, Proven Results.</p>
                 </div>
@@ -663,7 +668,7 @@
             </div>
         </div>
     </div>
-
+</main>
     <!-- Apply Form -->
     <div id="application-form" class="sidebar text_dark uk-flex uk-flex-column uk-flex-middle uk-flex-center">
         <div class="sidebar_wrapper">
@@ -704,7 +709,19 @@
 
     <script src="assets/vendors/gsap/js/ScrollTrigger.min.js"></script>
     <script src="assets/vendors/gsap/js/DrawSVGPlugin.min.js"></script>
-
+    <script src="assets/vendors/gsap/js/SplitText.js"></script>
+    <script src="assets/vendors/gsap/js/ScrollToPlugin.js"></script>
+    
+    
+    <script src="assets/js/lucid.js"></script>
     <script src="assets/js/app.js"></script>
+
+    <script>
+        $(window).on('load', function() {
+        
+          $(this).impulse();
+        });
+        </script>
+    
 </body>
 </html>
