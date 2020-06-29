@@ -20,6 +20,9 @@ $(document).ready(function($){
     const slidesQuoteOne = selectAll(".section_two .s_quote");
     const slidesQuoteTwo = selectAll(".section_three .s_quote");
 
+    const slideTwo = selectAll(".section_two");
+    const navMenu = selectAll(".section_lenders");
+
     let slideID = 0;
 
     const home = select("#home");
@@ -98,7 +101,7 @@ $(document).ready(function($){
                 scrollTrigger: {
                     trigger: slide,
                     start: "0px center",
-                    markers: true
+                    markers: false
                 }
             });
 
@@ -138,23 +141,52 @@ $(document).ready(function($){
     }
 
     function initQuoteTwo() {
-        slidesQuoteTwo.forEach((slidesQuoteTwo, i) => {
+        slidesQuoteTwo.forEach((slideQuoteTwo, i) => {
             let qtl = gsap.timeline({
                 scrollTrigger: {
-                    trigger: slidesQuoteTwo,
+                    trigger: slideQuoteTwo,
                     start: "-10% 50%",
                     markers: false,
                 }
             });
 
-            qtl.from(slidesQuoteTwo.querySelectorAll('blockquote'), {
+            qtl.from(slideQuoteTwo.querySelectorAll('blockquote'), {
                 ease: "power4",
                 x: "+=50vw",
                 opacity: 0,
-                duration: 2.5
+                duration: 3.5
             })
         })
     }
+
+    // function initSlideTwo() {
+    //     let mtlOne = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: slideTwo,
+    //             start: "top top",
+    //             end: "bottom bottom",
+    //             scrub: true,
+    //             markers: true
+    //         }
+    //     });
+
+    //     mtlOne.to('.bar_wrapper', {
+    //         ease: "power4",
+    //         height: 0
+    //     })
+
+    //     .to('.scroll_more', {
+    //         ease: "power4",
+    //         display: "none",
+    //         opacity: 0
+    //     })
+
+    //     .to('.menu_line_lenders', {
+    //         ease: "power4",
+    //         height: "100px"
+    //     })
+
+    // }
 
 
     function init(){
@@ -164,6 +196,7 @@ $(document).ready(function($){
         // initHeadingOne();
         initQuoteOne();
         initQuoteTwo();
+        // initSlideTwo();
     }
 
     window.onload = () => {
@@ -193,7 +226,7 @@ $(document).ready(function($){
     tlImage.to(bgMain, {
         y: "-0px", 
         duration: 0.1,
-        scale: 0.3,
+        scale: 0.4,
         transformOrigin: "top left"
     })
 
@@ -322,13 +355,13 @@ $(document).ready(function($){
 
     // gsap.set(".skewElem", {transformOrigin: "right center", force3D: true});
 
-    ScrollTrigger.create({
-        trigger: ".section_two",
-        start: "top 30%",
-        end: "bottom 50%",
-        markers: false,
-        toggleClass: {targets: ".s_navbar, .s_header", className: "dark_background"}
-    });
+    // ScrollTrigger.create({
+    //     trigger: ".section_two",
+    //     start: "top 30%",
+    //     end: "bottom 50%",
+    //     markers: false,
+    //     toggleClass: {targets: ".s_navbar, .s_header", className: "dark_background"}
+    // });
 
     ScrollTrigger.create({
         trigger: ".section_five",
@@ -337,6 +370,90 @@ $(document).ready(function($){
         markers: false,
         toggleClass: {targets: ".s_navbar, .s_header", className: "dark_background"}
     });
+
+    // const secTwo = document.querySelector(".section_two");
+
+    // function animationNavOne(){
+    //     let tlNav = gsap.timeline({delay:0.1});
+    //     tlNav.from('.menu_line_one', {
+    //         scaleX: 0,
+    //         transformOrigin: "center center",
+    //         ease: "none"
+    //     })
+
+    //     .to('.bar_wrapper', {
+    //         height: 0,
+    //         ease: "none"
+    //     })
+    // }
+
+    var menuLineOne = gsap.to('.menu_line_one', {
+        height: "64vh",
+        ease: "none"
+    });
+
+    var menuLineOneCollapse = gsap.to('.menu_line_one', {
+        height: 0,
+        ease: "none"
+    });
+
+    var menuLineTwo = gsap.to('.menu_line_two', {
+        height: "64vh",
+        ease: "none"
+    });
+
+    var scrollLine = gsap.to('.bar_wrapper', {
+        height: 0,
+        ease: "none"
+    })
+
+    ScrollTrigger.create({
+        trigger: ".section_two",
+        toggleActions: "restart pause resume pause",
+        start: "top 10%",
+        end: "bottom 40%",
+        markers: false,
+        scrub: true,
+        animation: menuLineOne,
+        toggleClass: { targets: ".s_navbar, .s_header", className: "section_lenders"},
+    });
+
+    ScrollTrigger.create({
+        trigger: ".section_two",
+        toggleActions: "restart reset resume reset",
+        start: "top 10%",
+        end: "bottom 40%",
+        markers: false,
+        scrub: true,
+        animation: scrollLine,
+        toggleClass: { targets: ".s_navbar, .s_header", className: "section_lenders"},
+    });
+
+    // Services Section Active
+
+    ScrollTrigger.create({
+        trigger: ".section_three",
+        toggleActions: "restart pause resume pause",
+        start: "top 10%",
+        end: "bottom 40%",
+        markers: true,
+        scrub: true,
+        animation: menuLineOneCollapse,
+        toggleClass: { targets: ".s_navbar, .s_header", className: "section_services"},
+    });
+
+    ScrollTrigger.create({
+        trigger: ".section_three",
+        toggleActions: "restart pause resume pause",
+        start: "top 10%",
+        end: "bottom 40%",
+        markers: true,
+        scrub: true,
+        animation: menuLineTwo,
+        toggleClass: { targets: ".s_navbar, .s_header", className: "section_services"},
+    });
+
+
 
 });
 

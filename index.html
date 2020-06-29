@@ -42,16 +42,16 @@
             </div>
         </div>
     </header>
-    <div class="s_navbar ">
+    <div class="s_navbar">
         <div class="scroll_more">
             <span class="scroll_more_text">Scroll</span>
             <span class="bar_wrapper"></span>
         </div>
         <ul class="navbar uk-text-uppercase uk-animation-fade">
-            <li><a href="#lenders" uk-scroll>Lenders</a></li>
-            <li><a href="#services" uk-scroll>Services</a></li>
-            <li><a href="#about" uk-scroll>Summer</a></li>
-            <li><a href="#contact" uk-scroll>Contact</a></li>
+            <li class="menu_lenders"><a href="#lenders" uk-scroll><span class="menu_text">Lenders</span><span class="menu_line menu_line_one"></span></a></li>
+            <li class="menu_services"><a href="#services" uk-scroll></span><span class="menu_text">Services</span><span class="menu_line menu_line_two"></span></a></li>
+            <li class="menu_about"><a href="#about" uk-scroll><span class="menu_text">Summer</span><span class="menu_line menu_line_three"></span></a></li>
+            <li class="menu_contact"><a href="#contact" uk-scroll><span class="menu_text">Contact</span><span class="menu_line menu_line_four"></span></a></li>
         </ul>
     </div>
 
@@ -713,15 +713,8 @@
     <script src="assets/vendors/gsap/js/ScrollToPlugin.js"></script>
     
     
-    <script src="assets/js/lucid.js"></script>
+    <!-- <script src="assets/js/lucid.js"></script> -->
     <script src="assets/js/app.js"></script>
 
-    <script>
-        $(window).on('load', function() {
-        
-          $(this).impulse();
-        });
-        </script>
-    
 </body>
 </html>

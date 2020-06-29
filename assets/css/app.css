@@ -203,7 +203,9 @@ body{
     background: var(--primary-color);
 }
 
+.section_lenders .scroll_more_text,
 .dark_background .scroll_more_text,
+.section_lenders .navbar a,
 .dark_background .navbar a{
     color: var(--secondary-color);
     transition: color 0.45s ease-in-out;
@@ -213,6 +215,7 @@ body{
     -o-transition: color 0.45s ease-in-out;
 }
 
+.section_lenders .bar_wrapper,
 .dark_background .bar_wrapper{
     background: var(--secondary-color);
     transition: background 0.45s ease-in-out;
@@ -222,6 +225,7 @@ body{
     -o-transition: background 0.45s ease-in-out;
 }
 
+.section_lenders .s_logo svg path,
 .dark_background .s_logo svg path{
     fill: var(--secondary-color);
     transition: fill 0.45s ease-in-out;
@@ -237,6 +241,36 @@ body{
     -moz-transition: fill 0.45s ease-in-out;
     -ms-transition: fill 0.45s ease-in-out;
     -o-transition: fill 0.45s ease-in-out;   
+}
+
+/* Navbar Animation */
+
+.section_lenders .menu_line,
+.dark_background .menu_line{
+    background: var(--secondary-color) !important;
+}
+
+.section_lenders .scroll_more{
+    /* display: none; */
+}
+
+.section_lenders .navbar{
+    height: 100%;
+}
+
+.menu_line{
+    width: 1px;
+    height: 100%;
+    max-height: calc(100vh - 326px);
+    background: var(--primary-color);
+    position: relative;
+    margin: 0 auto;
+    display: block;
+}
+
+.section_lenders .menu_lenders .menu_line{
+    margin-bottom: 25px;
+    margin-top: 20px;
 }
 
 /* GENERAL
