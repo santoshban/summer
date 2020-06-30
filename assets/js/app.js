@@ -101,14 +101,15 @@ $(document).ready(function($){
                 scrollTrigger: {
                     trigger: slide,
                     start: "0px center",
-                    markers: false
+                    markers: false,
+                    scrub: false
                 }
             });
 
             tl.from(slide.querySelectorAll('.section_heading'), {
                 ease: "power4",
                 y: "+=5vh",
-                duration: 1.5,
+                duration: 3.5,
             })
 
             .from(slide.querySelectorAll('.line__inner'), {
@@ -387,72 +388,50 @@ $(document).ready(function($){
     //     })
     // }
 
-    var menuLineOne = gsap.to('.menu_line_one', {
-        height: "64vh",
-        ease: "none"
-    });
 
-    var menuLineOneCollapse = gsap.to('.menu_line_one', {
-        height: 0,
-        ease: "none"
-    });
-
-    var menuLineTwo = gsap.to('.menu_line_two', {
-        height: "64vh",
-        ease: "none"
-    });
-
-    var scrollLine = gsap.to('.bar_wrapper', {
-        height: 0,
-        ease: "none"
-    })
-
+    //  Lenders section active
     ScrollTrigger.create({
         trigger: ".section_two",
         toggleActions: "restart pause resume pause",
         start: "top 10%",
-        end: "bottom 40%",
+        end: "bottom 10%",
         markers: false,
         scrub: true,
-        animation: menuLineOne,
-        toggleClass: { targets: ".s_navbar, .s_header", className: "section_lenders"},
-    });
-
-    ScrollTrigger.create({
-        trigger: ".section_two",
-        toggleActions: "restart reset resume reset",
-        start: "top 10%",
-        end: "bottom 40%",
-        markers: false,
-        scrub: true,
-        animation: scrollLine,
         toggleClass: { targets: ".s_navbar, .s_header", className: "section_lenders"},
     });
 
     // Services Section Active
-
     ScrollTrigger.create({
         trigger: ".section_three",
         toggleActions: "restart pause resume pause",
         start: "top 10%",
-        end: "bottom 40%",
-        markers: true,
+        end: "bottom 10%",
+        markers: false,
         scrub: true,
-        animation: menuLineOneCollapse,
         toggleClass: { targets: ".s_navbar, .s_header", className: "section_services"},
     });
 
+    // About Section Active
     ScrollTrigger.create({
-        trigger: ".section_three",
+        trigger: ".section_four",
         toggleActions: "restart pause resume pause",
         start: "top 10%",
-        end: "bottom 40%",
+        end: "bottom 30%",
         markers: true,
         scrub: true,
-        animation: menuLineTwo,
-        toggleClass: { targets: ".s_navbar, .s_header", className: "section_services"},
+        toggleClass: { targets: ".s_navbar, .s_header", className: "section_about"},
     });
 
+    // Career Section Active
+    ScrollTrigger.create({
+        trigger: ".section_five",
+        toggleActions: "restart pause resume pause",
+        start: "top 30%",
+        end: "bottom 10%",
+        markers: false,
+        scrub: true,
+        toggleClass: { targets: ".s_navbar, .s_header", className: "section_career"},
+    });
 
 
 });

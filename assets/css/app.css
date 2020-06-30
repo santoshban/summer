@@ -19,7 +19,7 @@ body{
 }
 
 [class*=uk-animation-] {
-    animation-duration: 1.5s !important;
+    animation-duration: 0.8s !important;
     animation-timing-function: ease-in-out !important;
 }
 
@@ -101,6 +101,15 @@ body{
     -o-border-radius: 100%;
     display: flex;
     justify-content: center;
+    transition: 0.25s ease-in-out;
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -ms-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+}
+.s_email a:hover,
+.s_email a:focus{
+    border-color: var(--secondary-color);
 }
 
 .s_navbar{
@@ -148,14 +157,12 @@ body{
     left: 0;
 }
 
-.navbar a:hover,
-.navbar a:focus{
+.navbar a:hover{
     text-decoration: none;
     color: var(--primary-color);
 }
 
-.navbar a:hover:after,
-.navbar a:focus:after{
+.navbar a:hover:after{
     transform: scaleX(1) translateZ(0);
     transform-origin: 0 0;
     background: var(--primary-color);
@@ -190,7 +197,7 @@ body{
 
 .bar_wrapper{
     width: 1px;
-    height: calc(100vh - 400px);
+    height: calc(100vh - 430px);
     position: relative;
     display: inline-block;
     transform: translateX(-50%);
@@ -250,8 +257,11 @@ body{
     background: var(--secondary-color) !important;
 }
 
-.section_lenders .scroll_more{
-    /* display: none; */
+.section_lenders .scroll_more,
+.section_services .scroll_more,
+.section_about .scroll_more,
+.section_career .scroll_more{
+    display: none;
 }
 
 .section_lenders .navbar{
@@ -266,11 +276,16 @@ body{
     position: relative;
     margin: 0 auto;
     display: block;
+    pointer-events: none;
 }
 
-.section_lenders .menu_lenders .menu_line{
+.section_lenders .menu_lenders .menu_line,
+.section_services .menu_services .menu_line,
+.section_about .menu_about .menu_line,
+.section_career .menu_career .menu_line{
     margin-bottom: 25px;
     margin-top: 20px;
+    height: calc(100vh - 356px);
 }
 
 /* GENERAL
